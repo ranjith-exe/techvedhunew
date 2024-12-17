@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Import the Header, Footer, and pages
 import Header from './src/include/theheader';
@@ -11,7 +11,7 @@ import NotFound from './src/pages/notfound';
 
 function App() {
   return (
-    <Router basename="/techvedhu/"> {/* Set basename for GitHub Pages */}
+    <Router> {/* HashRouter does not require basename */}
       <div>
         <Header />
         <main>

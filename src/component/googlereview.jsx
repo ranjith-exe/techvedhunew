@@ -24,7 +24,7 @@ const GoogleReviews = () => {
               <img
                 src={Greviewlogo}
                 alt="Google Logo"
-                className="mr-3 w-44"
+                className="mr-3 w-16 md:w-28"
               />
               <span className="text-3xl font-semibold text-gray-900">4.8</span>
               <div className="ml-3 text-yellow-500 text-xl">
@@ -35,9 +35,9 @@ const GoogleReviews = () => {
 
           {/* Outer div with yellow border for the review cards */}
           <div className="col-span-2 border-2 border-yellow-500 p-8 rounded-lg">
-            <div className="flex gap-8 justify-center mt-8 md:mt-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
               {/* Ravina Review */}
-              <div className="bg-[#F8C66D] shadow-xl rounded-lg p-8 border-2  max-w-xs">
+              <div className="bg-[#F8C66D] shadow-xl rounded-lg p-8 border-2 max-w-xs mx-auto">
                 <div className="flex items-center justify-center mb-6">
                   <img
                     src={ravina}
@@ -46,7 +46,7 @@ const GoogleReviews = () => {
                   />
                 </div>
                 <h3 className="text-lg font-semibold mb-2 text-gray-800">Ravina</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-sm md:text-med">
                   Skill-lync is a place where I discovered myself as a Mechanical
                   Engineer. It has been a wonderful journey. Had I not acquired such
                   skills, I wouldn't have come across opportunities like this.
@@ -54,7 +54,7 @@ const GoogleReviews = () => {
               </div>
 
               {/* Vijay Review */}
-              <div className="bg-[#F8C66D] shadow-xl rounded-lg p-8 border-2  max-w-xs">
+              <div className="bg-[#F8C66D] shadow-xl rounded-lg p-8 border-2 max-w-xs mx-auto">
                 <div className="flex items-center justify-center mb-6">
                   <img
                     src={vijay}

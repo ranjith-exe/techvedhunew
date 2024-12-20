@@ -1,41 +1,59 @@
-import React, { useState, useEffect, useRef } from "react";
-import { FiChevronDown } from "react-icons/fi";
+import React, { useState } from "react";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { AiOutlineClose } from "react-icons/ai";
 import whitelogo from "./../assets/images/header-logowhite.png";
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState({
-    internshipProgram: false,
-    placementAssurance: false,
-    more: false,
-  });
-  const submenuRef = useRef({});
-  const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(null); // Track which submenu is open in mobile view
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const toggleSubmenu = (menu) => {
-    if (activeSubmenu === menu) {
-      setActiveSubmenu(null); // Close the submenu if it's already open
-    } else {
-      setActiveSubmenu(menu); // Open the clicked submenu
-    }
+  const toggleSubmenu = (index) => {
+    setIsSubmenuOpen(isSubmenuOpen === index ? null : index);
   };
 
-  const closeSubmenuOnOutsideClick = (e) => {
-    if (submenuRef.current && !submenuRef.current.contains(e.target)) {
-      setActiveSubmenu(null); // Close all submenus if clicking outside
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", closeSubmenuOnOutsideClick);
-    return () => {
-      document.removeEventListener("mousedown", closeSubmenuOnOutsideClick);
-    };
-  }, []);
+  // Menu Structure
+  const menuItems = [
+    { label: "Home", link: "#" },
+    {
+      label: "Internship Program",
+      link: "#",
+      submenu: [
+        "PYTHON",
+        "CLOUD COMPUTING",
+        "ARTIFICIAL INTELLIGENCE",
+        "CYBER SECURITY",
+        "DATA SCIENCE",
+        "APP DEVELOPMENT",
+        "WEB DEVELOPMENT",
+        "DIGITAL MARKETING",
+        "MACHINE LEARNING",
+        "MARKETING AND SALES",
+        "JAVA",
+        "HUMAN RESOURCE",
+        "UI/UX",
+        "FINANCE",
+        "STOCK MARKET",
+      ],
+    },
+    {
+      label: "Placement Assurance",
+      link: "#",
+      submenu: [
+        "Fullstack Developer",
+        "Android Developer",
+        "Data analysis and Data science",
+      ],
+    },
+    {
+      label: "More",
+      link: "#",
+      submenu: ["About Us", "Contact"],
+    },
+  ];
 
   return (
     <header className="bg-primary text-white">
@@ -46,144 +64,121 @@ function Header() {
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex space-x-6 font-semibold relative z-50">
-          <a href="#" className="relative group text-white">
-            Home
-            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full group-hover:translate-x-0.5 group-hover:bg-gradient-to-r group-hover:from-[#0a4289] group-hover:to-[#6f84a1]"></span>
-          </a>
+        <nav className="hidden md:flex items-center mr-7 space-x-6 font-semibold">
+          {menuItems.map((item, index) => (
+            <div key={index} className="relative group">
+              <a
+                href={item.link}
+                className="relative group text-white flex items-center"
+              >
+                {item.label}
+                {item.submenu && <FiChevronDown className="ml-1" />}
+              </a>
+              {item.submenu && (
+                <div className="absolute left-0 z-50 top-full mt-1 hidden group-hover:flex flex-col bg-gray-50 text-black py-2 rounded shadow-lg transition-all duration-300">
+                  {item.submenu.map((subitem, subindex) => (
+                    <a
+                      key={subindex}
+                      href="#"
+                      className="px-4 py-2 hover:bg-gray-200 transition-all duration-300 whitespace-nowrap">
+                      {subitem}
+                    </a>
+                  ))}
+                </div>
+              )}
 
-          {/* Internship Program with Dropdown */}
-          <div
-            className="relative"
-            ref={(el) => (submenuRef.current.internshipProgram = el)}
-          >
-            <a
-              href="#"
-              className="relative group text-white flex items-center"
-              onClick={() => toggleSubmenu("internshipProgram")}
-            >
-              Internship Program
-              <FiChevronDown className="ml-1" />
-              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full group-hover:translate-x-0.5 group-hover:bg-gradient-to-r group-hover:from-[#0a4289] group-hover:to-[#6f84a1]"></span>
-            </a>
-            {/* Submenu */}
-            <div
-              className={`absolute left-0 top-full mt-1 ${activeSubmenu === "internshipProgram" ? "flex" : "hidden"
-                } flex-col bg-white text-black py-2 rounded shadow-lg w-full z-50 transition-all duration-300 opacity-0 ${activeSubmenu === "internshipProgram" ? "opacity-100" : ""
-                }`}
-            >
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">PYTHON</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">CLOUD COMPUTING</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">ARTIFICIAL INTELLIGENCE</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">CYBER SECURITY</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">DATA SCIENCE</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">APP DEVELOPMENT</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">WEB DEVELOPMENT</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">DIGITAL MARKETING</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">MACHINE LEARNING</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">MARKETING AND SALES</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">JAVA</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">HUMAN RESOURCE</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">UI/UX</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">FINANCE</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-100">STOCK MARKET</a>
             </div>
-          </div>
-
-          {/* Placement Assurance with Dropdown */}
-          <div
-            className="relative"
-            ref={(el) => (submenuRef.current.placementAssurance = el)}
+          ))}
+          <a
+            href="#"
+            className="font-medium border border-white px-4 py-2 rounded transition-all duration-300 ease-in-out hover:bg-white hover:text-blue-900 hover:scale-105"
           >
-            <a
-              href="#"
-              className="relative group text-white flex items-center"
-              onClick={() => toggleSubmenu("placementAssurance")}
-            >
-              Placement Assurance
-              <FiChevronDown className="ml-1" />
-              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full group-hover:translate-x-0.5 group-hover:bg-gradient-to-r group-hover:from-[#0a4289] group-hover:to-[#6f84a1]"></span>
-            </a>
-            {/* Submenu */}
-            <div
-              className={`absolute left-0 top-full mt-1 ${activeSubmenu === "placementAssurance" ? "flex" : "hidden"
-                } flex-col bg-white text-black py-2 rounded shadow-lg w-full z-50 transition-all duration-300 opacity-0 ${activeSubmenu === "placementAssurance" ? "opacity-100" : ""
-                }`}
-            >
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-300">Fullstack Developer</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-300">Android Developer</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-300">Data analysis and Data science</a>
-            </div>
-          </div>
-
-          {/* More with Dropdown */}
-          <div
-            className="relative"
-            ref={(el) => (submenuRef.current.more = el)}
-          >
-            <a
-              href="#"
-              className="relative group text-white flex items-center"
-              onClick={() => toggleSubmenu("more")}
-            >
-              More
-              <FiChevronDown className="ml-1" />
-              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full group-hover:translate-x-0.5 group-hover:bg-gradient-to-r group-hover:from-[#0a4289] group-hover:to-[#6f84a1]"></span>
-            </a>
-            {/* Submenu */}
-            <div
-              className={`absolute left-0 top-full mt-1 ${activeSubmenu === "more" ? "flex" : "hidden"
-                } flex-col bg-white text-black py-2 rounded shadow-lg w-220 z-50 transition-all duration-300 opacity-0 ${activeSubmenu === "more" ? "opacity-100" : ""
-                }`}
-            >
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-300">About Us</a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200 transition-all duration-300">Contact</a>
-            </div>
-          </div>
-        </nav>
-
-        {/* Login/Signup Button */}
-        <a
-  href="#"
-  className="hidden md:block font-medium border border-white px-4 py-2 rounded transition-all duration-300 ease-in-out hover:bg-white hover:text-blue-900 hover:scale-105"
->
-  Login/Signup
-</a>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={toggleMobileMenu}
-          className="md:hidden text-white focus:outline-none"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
-      </div>
-
-      {/* Mobile Navigation Links */}
-      {isMobileMenuOpen && (
-        <nav className="md:hidden bg-blue-800 text-white">
-          <a href="#" className="block px-4 py-2 hover:bg-blue-700">Home</a>
-          <a href="#" className="block px-4 py-2 hover:bg-blue-700">Internship Program</a>
-          <a href="#" className="block px-4 py-2 hover:bg-blue-700">Placement assurance</a>
-          <a href="#" className="block px-4 py-2 hover:bg-blue-700">More</a>
-          <a href="#" className="block px-4 py-2 border-t border-white hover:bg-blue-700">
             Login/Signup
           </a>
         </nav>
-      )}
+
+        {/* Mobile Menu Button */}
+        <button onClick={toggleMobileMenu} className="md:hidden text-white">
+          {isMobileMenuOpen ? (
+            <AiOutlineClose className="w-6 h-6" />
+          ) : (
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          )}
+        </button>
+      </div>
+
+      {/* Mobile Navigation Sidebar */}
+      <div
+        className={`fixed top-0 left-0 h-full bg-gray-700 z-50 shadow-lg transform ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+          } transition-transform duration-300 ease-in-out w-3/4`}
+      >
+        <div className="p-4">
+          {menuItems.map((item, index) => (
+            <div key={index} className="mb-2">
+              {/* Main Menu Item */}
+              <div
+                className="flex justify-between items-center px-4 py-2 cursor-pointer transition-all duration-300  text-white"
+                onClick={() => item.submenu && toggleSubmenu(index)}
+              >
+                {item.label}
+                {item.submenu && (
+                  <>
+                    {isSubmenuOpen === index ? (
+                      <FiChevronUp className="ml-2" />
+                    ) : (
+                      <FiChevronDown className="ml-2" />
+                    )}
+                  </>
+                )}
+              </div>
+
+              {/* Submenu */}
+              {item.submenu && (
+                <div
+                  className={`ml-4 mt-2 overflow-hidden transition-all duration-500 ease-out ${isSubmenuOpen === index
+                      ? "max-h-screen opacity-100"
+                      : "max-h-0 opacity-0"
+                    }`}
+                  style={{
+                    transition: "max-height 0.5s ease-out, opacity 0.3s ease-out",
+                  }}
+                >
+                  {item.submenu.map((subitem, subindex) => (
+                    <a
+                      key={subindex}
+                      href="#"
+                      className="block px-4 py-2  transition-all duration-300 text-white"
+                    >
+                      {subitem}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+          {/* Login/Signup Link */}
+          <a
+            href="#"
+            className="block px-4 py-2 border-t border-gray-300 text-white transition-all duration-300"
+          >
+            Login/Signup
+          </a>
+        </div>
+      </div>
+
     </header>
   );
 }

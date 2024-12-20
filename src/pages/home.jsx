@@ -1,37 +1,34 @@
-import React from 'react';
-import CertificateSlider from '../component/certificateslider';
-import PlacementCourse from '../component/placementguaranteed';
-import GoogleReviews from '../component/googlereview';
-import play from "../assets/images/play.png"
-import heroimg from "../assets/images/homebanner.png"
+import React from "react";
+import CertificateSlider from "../component/certificateslider";
+import PlacementCourse from "../component/placementguaranteed";
+import GoogleReviews from "../component/googlereview";
+import play from "../assets/images/play.png";
+import heroimg from "../assets/images/homebanner.png";
 
+import whychooseus1 from "../assets/images/whychooseus-1.png";
+import whychooseus2 from "../assets/images/whychooseus-2.png";
+import whychooseus3 from "../assets/images/whychooseus-3.png";
+import whychooseus4 from "../assets/images/whychooseus-4.png";
+import whychooseus5 from "../assets/images/whychooseus-5.png";
+import whychooseus6 from "../assets/images/whychooseus-6.png";
 
-import whychooseus1 from "../assets/images/whychooseus-1.png"
-import whychooseus2 from "../assets/images/whychooseus-2.png"
-import whychooseus3 from "../assets/images/whychooseus-3.png"
-import whychooseus4 from "../assets/images/whychooseus-4.png"
-import whychooseus5 from "../assets/images/whychooseus-5.png"
-import whychooseus6 from "../assets/images/whychooseus-6.png"
-
-//Intership 
-import intership1 from "../assets/images/intership-1.png"
-import intership2 from "../assets/images/intership-2.png"
+//Intership
+import intership1 from "../assets/images/intership-1.png";
+import intership2 from "../assets/images/intership-2.png";
 
 //company
 
-import cognizant from "../assets/images/cognizant-logo.png"
-import accenture from "../assets/images/accenture-logo.png"
-import zoho from "../assets/images/zoho-logo.png"
-import microsoft from "../assets/images/microsoft-logo.png"
-import amazon from "../assets/images/amazon-logo.png"
-import walmart from "../assets/images/walmart-logo.png"
+import cognizant from "../assets/images/cognizant-logo.png";
+import accenture from "../assets/images/accenture-logo.png";
+import zoho from "../assets/images/zoho-logo.png";
+import microsoft from "../assets/images/microsoft-logo.png";
+import amazon from "../assets/images/amazon-logo.png";
+import walmart from "../assets/images/walmart-logo.png";
 
 function Home() {
   return (
     <>
-      <div className="bg-white py-4 px-8"></div>
-
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 px-5 lg:grid-cols-2 gap-8">
+      <div className="bg-white py-4 mx-16 max-w-screen-xl grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Right Side (Image) */}
         <div className="relative flex justify-center items-center mt-8 lg:mt-0 order-first lg:order-last">
           <img
@@ -43,23 +40,25 @@ function Home() {
 
         {/* Left Side */}
         <div className="flex flex-col justify-center text-center md:text-left mt-9">
-          <h1 className="text-5xl md:text-4xl font-bold text-gray-900 mb-4">
-            Learn Just Like You<br />
-            Would be in the Best<br />
-            Tech Companies in India
-          </h1>
+          <h1 className="text-5xl md:text-4xl font-bold text-gray-900 mb-3">Learn Just Like You</h1>
+          <h1 className="text-5xl md:text-4xl font-bold text-gray-900 mb-3">Would be in the Best</h1>
+          <h1 className="text-5xl md:text-4xl font-bold text-gray-900 mb-3">Tech Companies in India</h1>
           <p className="text-lg font-medium text-gray-900 my-7">
-            Work-experience-based learning personalized way programs to Supercharge your career and land your dream tech job
+            Work-experience-based learning personalized way programs to
+            Supercharge your career and land your dream tech job
           </p>
 
           <p className="text-lg font-medium text-gray-900 my-1">
-            <span className="text-xl font-semibold text-primary">Build </span>professional projects with professionals.
+            <span className="text-xl font-semibold text-primary">Build </span>
+            professional projects with professionals.
           </p>
           <p className="text-lg font-medium text-gray-900 my-1">
-            <span className="text-xl font-semibold text-primary">Master </span>the current cutting-edge technologies
+            <span className="text-xl font-semibold text-primary">Master </span>
+            the current cutting-edge technologies
           </p>
           <p className="text-lg font-medium text-gray-900 my-1 mb-4">
-            <span className="text-xl font-semibold text-primary">Crack </span>your dream role at the best tech companies
+            <span className="text-xl font-semibold text-primary">Crack </span>
+            your dream role at the best tech companies
           </p>
 
           <p className="text-primary font-semibold text-2xl my-5 flex items-center">
@@ -68,69 +67,110 @@ function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2">
-            <button className="px-7 py-4 bg-transparent border-2 border-primary text-primary font-medium rounded-2xl hover:bg-primary hover:text-white focus:outline-none">
+            <button className="px-12 py-4 bg-transparent border-2 border-primary text-primary font-medium rounded-2xl hover:bg-primary hover:text-white focus:outline-none">
               Explore Our Programs
             </button>
 
-            <button className="px-7 py-4 bg-primary text-white font-medium rounded-2xl shadow-md hover:bg-blue-700 focus:outline-none">
+            <button className="px-12 py-4 bg-primary text-white font-medium rounded-2xl shadow-md hover:bg-blue-600 focus:outline-none">
               Book Your Free Trial, Now
             </button>
           </div>
         </div>
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-custom-radial-skyblue">
-
         <div className="flex flex-wrap justify-center gap-x-8 bg-[#ecf4ff] rounded-lg shadow-md py-6 mb-12 items-center">
           <div className="text-center p-4 sm:py-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-blue-800">1000+</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-blue-800">
+              1000+
+            </h2>
             <p className="text-gray-600 text-sm">Learning hours</p>
           </div>
           <div className="text-center p-4 border-t sm:border-t-0 sm:border-l border-gray-200">
             <h2 className="text-xl sm:text-2xl font-bold text-blue-800">92%</h2>
-            <p className="text-gray-600 text-sm">Of learners noted a positive impact on productivity</p>
+            <p className="text-gray-600 text-sm">
+              Of learners noted a positive impact on productivity
+            </p>
           </div>
           <div className="text-center p-4 border-t sm:border-t-0 sm:border-l border-gray-200">
             <h2 className="text-xl sm:text-2xl font-bold text-blue-800">50%</h2>
             <p className="text-gray-600 text-sm">Average salary hike</p>
           </div>
           <div className="text-center p-4 border-t sm:border-t-0 sm:border-l border-gray-200">
-            <h2 className="text-xl sm:text-2xl font-bold text-blue-800">100+</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-blue-800">
+              100+
+            </h2>
             <p className="text-gray-600 text-sm">Hiring partners</p>
           </div>
         </div>
 
-
-
-        <h2 className="text-center text-2xl sm:text-4xl font-bold text-blue-800 my-10 sm:my-20">Why Choose Us</h2>
+        <h2 className="text-center text-2xl sm:text-4xl font-bold text-blue-800 my-10 sm:my-20">
+          Why Choose Us
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="flex flex-col items-center bg-white rounded-lg shadow-md px-6 py-14 text-center">
-            <img src={whychooseus1} alt="Live Interactive Class" className="w-10 h-10 sm:w-12 sm:h-12 mb-4" />
-            <h3 className="font-semibold text-gray-700 text-base sm:text-lg">Live interactive class</h3>
+            <img
+              src={whychooseus1}
+              alt="Live Interactive Class"
+              className="w-10 h-10 sm:w-12 sm:h-12 mb-4"
+            />
+            <h3 className="font-semibold text-gray-700 text-base sm:text-lg">
+              Live interactive class
+            </h3>
           </div>
 
           <div className="flex flex-col items-center bg-white rounded-lg shadow-md px-6 py-10 text-center">
-            <img src={whychooseus2} alt="Gain Working Experience" className="w-10 h-10 sm:w-12 sm:h-12 mb-4" />
-            <h3 className="font-semibold text-gray-700 text-base sm:text-lg">Gain working experience</h3>
+            <img
+              src={whychooseus2}
+              alt="Gain Working Experience"
+              className="w-10 h-10 sm:w-12 sm:h-12 mb-4"
+            />
+            <h3 className="font-semibold text-gray-700 text-base sm:text-lg">
+              Gain working experience
+            </h3>
           </div>
 
           <div className="flex flex-col items-center bg-white rounded-lg shadow-md px-6 py-10 text-center">
-            <img src={whychooseus3} alt="1-1 Assistance" className="w-10 h-10 sm:w-12 sm:h-12 mb-4" />
-            <h3 className="font-semibold text-gray-700 text-base sm:text-lg">1-1 assistance</h3>
+            <img
+              src={whychooseus3}
+              alt="1-1 Assistance"
+              className="w-10 h-10 sm:w-12 sm:h-12 mb-4"
+            />
+            <h3 className="font-semibold text-gray-700 text-base sm:text-lg">
+              1-1 assistance
+            </h3>
           </div>
 
           <div className="flex flex-col items-center bg-white rounded-lg shadow-md px-6 py-10 text-center">
-            <img src={whychooseus4} alt="Expert advise" className="w-10 h-10 sm:w-12 sm:h-12 mb-4" />
-            <h3 className="font-semibold text-gray-700 text-base sm:text-lg">Expert advise</h3>
+            <img
+              src={whychooseus4}
+              alt="Expert advise"
+              className="w-10 h-10 sm:w-12 sm:h-12 mb-4"
+            />
+            <h3 className="font-semibold text-gray-700 text-base sm:text-lg">
+              Expert advise
+            </h3>
           </div>
 
           <div className="flex flex-col items-center bg-white rounded-lg shadow-md px-6 py-10 text-center">
-            <img src={whychooseus5} alt="Mock assessment" className="w-10 h-10 sm:w-12 sm:h-12 mb-4" />
-            <h3 className="font-semibold text-gray-700 text-base sm:text-lg">Mock assessment</h3>
+            <img
+              src={whychooseus5}
+              alt="Mock assessment"
+              className="w-10 h-10 sm:w-12 sm:h-12 mb-4"
+            />
+            <h3 className="font-semibold text-gray-700 text-base sm:text-lg">
+              Mock assessment
+            </h3>
           </div>
 
           <div className="flex flex-col items-center bg-white rounded-lg shadow-md px-6 py-10 text-center">
-            <img src={whychooseus6} alt="Placement guaranteed" className="w-10 h-10 sm:w-12 sm:h-12 mb-4" />
-            <h3 className="font-semibold text-gray-700 text-base sm:text-lg">Placement guaranteed</h3>
+            <img
+              src={whychooseus6}
+              alt="Placement guaranteed"
+              className="w-10 h-10 sm:w-12 sm:h-12 mb-4"
+            />
+            <h3 className="font-semibold text-gray-700 text-base sm:text-lg">
+              Placement guaranteed
+            </h3>
           </div>
         </div>
       </div>
@@ -142,7 +182,6 @@ function Home() {
             Supercharge your career right away
           </h2>
         </div>
-
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-36 px-4 sm:px-6 md:px-0">
           {/* Internship / Certificate Program */}
@@ -162,8 +201,8 @@ function Home() {
               {/* Content */}
               <div className="flex flex-col justify-center text-left">
                 <p className="text-sm sm:text-base text-gray-600 mb-4">
-                  The intern’s responsibilities, the skills they developed, and an
-                  evaluation of their performance.
+                  The intern’s responsibilities, the skills they developed, and
+                  an evaluation of their performance.
                 </p>
                 <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
                   Explore now →
@@ -198,7 +237,6 @@ function Home() {
             </div>
           </div>
         </div>
-
 
         {/* Logos Section */}
         <div className="bg-[#1554A514] mt-12 py-8 px-4 sm:px-6  mx-auto mb-12">
@@ -239,7 +277,6 @@ function Home() {
             />
           </div>
         </div>
-
       </div>
 
       <CertificateSlider />
@@ -247,7 +284,6 @@ function Home() {
       <PlacementCourse />
 
       <GoogleReviews />
-
     </>
   );
 }

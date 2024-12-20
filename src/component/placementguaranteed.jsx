@@ -6,6 +6,8 @@ import checkmark from "../assets/images/checkmark.png";
 import { BiLeftArrowCircle } from "react-icons/bi";
 import { BiRightArrowCircle } from "react-icons/bi";
 
+import trailsession from "../assets/images/mini-truck.png"
+
 const PlacementCourse = () => {
   return (
     <section className="w-full bg-white py-10">
@@ -14,7 +16,7 @@ const PlacementCourse = () => {
       </h2>
 
       {/* Main Section */}
-      <div className="bg-[#0a4289] text-white mt-8 py-10 px-6 min-w-full mx-auto rounded-md relative">
+      <div className="bg-[#0a4289] text-white mt-8 py-10 px-6 min-w-full mx-auto relative">
         {/* Left Arrow */}
         <button className="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-md text-[#0a4289]">
           <BiLeftArrowCircle size={30} />
@@ -22,22 +24,57 @@ const PlacementCourse = () => {
 
         {/* Content */}
         <div className="text-center mb-6">
-          
-            <img
-              src={settings} // Replace with your gear icon PNG path
-              alt="Gear Icon"
-              className="mx-auto mb-3 bg-white rounded-full w-20 p-3"
-            />
-         
-          <h3 className="text-2xl font-bold">
+
+          <img
+            src={settings} // Replace with your gear icon PNG path
+            alt="Gear Icon"
+            className="mx-auto mb-3 bg-white rounded-full w-20 p-3"
+          />
+
+          <h3 className="text-2xl font-bold mb-4">
             Fellowship Program in Software Development
           </h3>
-          <p className="text-sm mt-2">
+          <p className="text-sm">
             Learn with real work experience and get assured referrals to
             transition into a Full-Stack or Backend Developer at product-based
             companies
           </p>
         </div>
+
+        <div className="grid grid-cols-12 gap-4">
+          <div className="col-span-7">
+            <div className="bg-white rounded-2xl my-6 py-6">
+              <div className="flex place-items-start">
+              <div className="flex mb-4 items-start px-10">
+                <img src={checkmark} className="w-5 mt--3" alt="" />
+                <p className="text-black text-sm">&nbsp;Project - led MERN or Backend
+                Specialisation</p>
+              </div>              
+              <div className="flex mb-4 items-start px-10">
+                <img src={checkmark} className="w-5" alt="" />
+                <p className="text-black text-sm">&nbsp;DS, Algo, and System Design
+                Curriculum</p>
+              </div>
+              </div>
+              <div className="flex">
+              <div className="flex mb-4 items-start px-10">
+                <img src={checkmark} className="w-5" alt="" />
+                <p className="text-black text-sm">&nbsp;Externships with Real Tech
+                Companies</p>
+              </div>              
+              <div className="flex mb-4 items-start px-10">
+                <img src={checkmark} className="w-5" alt="" />
+                <p className="text-black text-sm">&nbsp;Assured referrals in top dev
+                roles</p>
+              </div>
+              </div>           
+            </div>
+          </div>
+          <div className="col-span-5 bg-gray-300">
+            {/* Content for the second column */}
+          </div>
+        </div>
+
 
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -92,24 +129,35 @@ const PlacementCourse = () => {
           {/* Right Section */}
           <div className="grid grid-cols-2 gap-4">
             <div className="p-4 bg-white text-[#0a4289] rounded-md shadow-md">
-              <p className="text-sm font-semibold">🕒 Trial Session</p>
-              <p className="text-sm mt-1">Free</p>
+              <div className="flex items-center">
+                <img src={trailsession} className="w-7" />
+                <p className="text-sm font-semibold text-[#767474]">&nbsp;Trial Session</p>
+              </div>
+              <p className="ml-8 text-sm font-bold mt-1">Free</p>
             </div>
             <div className="p-4 bg-white text-[#0a4289] rounded-md shadow-md">
-              <p className="text-sm font-semibold">⏳ Duration</p>
-              <p className="text-sm mt-1">9 Months</p>
+              <div className="flex items-center">
+                <img src={trailsession} className="w-7" />
+                <p className="text-sm font-semibold text-[#767474]">&nbsp;Trial Session</p>
+              </div>
+              <p className="ml-8 text-sm font-bold mt-1">Free</p>
             </div>
             <div className="p-4 bg-white text-[#0a4289] rounded-md shadow-md">
-              <p className="text-sm font-semibold">🎓 Scholarships</p>
-              <p className="text-sm mt-1">Assured Scholarships</p>
+              <div className="flex items-center">
+                <img src={trailsession} className="w-7" />
+                <p className="text-sm font-semibold text-[#767474]">&nbsp;Trial Session</p>
+              </div>
+              <p className="ml-8 text-sm font-bold mt-1">Free</p>
             </div>
             <div className="p-4 bg-white text-[#0a4289] rounded-md shadow-md">
-              <p className="text-sm font-semibold">💼 Career Services</p>
-              <p className="text-sm mt-1">Assured Referrals</p>
+              <div className="flex items-center">
+                <img src={trailsession} className="w-7" />
+                <p className="text-sm font-semibold text-[#767474]">&nbsp;Trial Session</p>
+              </div>
+              <p className="ml-8 text-sm font-bold mt-1">Free</p>
             </div>
           </div>
         </div>
-
         {/* Specialisation */}
         <div className="mt-8 flex flex-col md:flex-row justify-center gap-6 text-[#0a4289]">
           <div className="bg-white p-4 rounded-md shadow-md w-full md:w-1/2">
@@ -136,7 +184,6 @@ const PlacementCourse = () => {
             </p>
           </div>
         </div>
-
         {/* Buttons */}
         <div className="flex justify-center gap-4 mt-8">
           <button className="px-5 py-2 border-2 border-white text-white rounded-md hover:bg-white hover:text-[#0a4289] transition duration-300">
@@ -146,7 +193,6 @@ const PlacementCourse = () => {
             Apply Now ➤
           </button>
         </div>
-
         {/* Right Arrow */}
         <button className="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-md text-[#0a4289]">
           <BiRightArrowCircle size={30} />

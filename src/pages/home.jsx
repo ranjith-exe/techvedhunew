@@ -28,83 +28,82 @@ import walmart from "../assets/images/walmart-logo.png"
 
 function Home() {
   return (
-    <div className="bg-white py-4 px-8">
+    <>
+      <div className="bg-white py-4 px-8"></div>
 
-<div className="max-w-screen-xl mx-auto grid grid-cols-1 px-5 lg:grid-cols-2 gap-8">
-  {/* Right Side (Image) */}
-  <div className="relative flex justify-center items-center mt-8 lg:mt-0 order-first lg:order-last">
-    <img
-      src={heroimg}
-      alt="Hero"
-      className="w-80 md:w-screen h-auto rounded-lg z-30"
-    />
-  </div>
-
-  {/* Left Side */}
-  <div className="flex flex-col justify-center text-center md:text-left mt-9">
-    <h1 className="text-5xl md:text-4xl font-bold text-gray-900 mb-4">
-      Learn Just Like You<br />
-      Would be in the Best<br />
-      Tech Companies in India
-    </h1>
-    <p className="text-lg font-medium text-gray-900 my-7">
-      Work-experience-based learning personalized way programs to Supercharge your career and land your dream tech job
-    </p>
-
-    <p className="text-lg font-medium text-gray-900 my-1">
-      <span className="text-xl font-semibold text-primary">Build </span>professional projects with professionals.
-    </p>
-    <p className="text-lg font-medium text-gray-900 my-1">
-      <span className="text-xl font-semibold text-primary">Master </span>the current cutting-edge technologies
-    </p>
-    <p className="text-lg font-medium text-gray-900 my-1 mb-4">
-      <span className="text-xl font-semibold text-primary">Crack </span>your dream role at the best tech companies
-    </p>
-
-    <p className="text-primary font-semibold text-2xl my-5 flex items-center">
-      <img src={play} className="w-10" />
-      &nbsp;Upskill with Tech Vedhu
-    </p>
-
-    <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2">
-      <button className="px-7 py-4 bg-transparent border-2 border-primary text-primary font-medium rounded-2xl hover:bg-primary hover:text-white focus:outline-none">
-        Explore Our Programs
-      </button>
-
-      <button className="px-7 py-4 bg-primary text-white font-medium rounded-2xl shadow-md hover:bg-blue-700 focus:outline-none">
-        Book Your Free Trial, Now
-      </button>
-    </div>
-  </div>
-</div>
-
-     
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-custom-radial-skyblue">
-
-      <div className="flex flex-wrap justify-center gap-x-8 bg-[#ecf4ff] rounded-lg shadow-md py-6 mb-12 items-center bg-[rgba(21,84,165,0.30)]">
-        <div className="text-center p-4 sm:py-8">
-          <h2 className="text-xl sm:text-2xl font-bold text-blue-800">1000+</h2>
-          <p className="text-gray-600 text-sm">Learning hours</p>
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 px-5 lg:grid-cols-2 gap-8">
+        {/* Right Side (Image) */}
+        <div className="relative flex justify-center items-center mt-8 lg:mt-0 order-first lg:order-last">
+          <img
+            src={heroimg}
+            alt="Hero"
+            className="w-80 md:w-screen h-auto rounded-lg z-30"
+          />
         </div>
-        <div className="text-center p-4 border-t sm:border-t-0 sm:border-l border-gray-200">
-          <h2 className="text-xl sm:text-2xl font-bold text-blue-800">92%</h2>
-          <p className="text-gray-600 text-sm">Of learners noted a positive impact on productivity</p>
-        </div>
-        <div className="text-center p-4 border-t sm:border-t-0 sm:border-l border-gray-200">
-          <h2 className="text-xl sm:text-2xl font-bold text-blue-800">50%</h2>
-          <p className="text-gray-600 text-sm">Average salary hike</p>
-        </div>
-        <div className="text-center p-4 border-t sm:border-t-0 sm:border-l border-gray-200">
-          <h2 className="text-xl sm:text-2xl font-bold text-blue-800">100+</h2>
-          <p className="text-gray-600 text-sm">Hiring partners</p>
+
+        {/* Left Side */}
+        <div className="flex flex-col justify-center text-center md:text-left mt-9">
+          <h1 className="text-5xl md:text-4xl font-bold text-gray-900 mb-4">
+            Learn Just Like You<br />
+            Would be in the Best<br />
+            Tech Companies in India
+          </h1>
+          <p className="text-lg font-medium text-gray-900 my-7">
+            Work-experience-based learning personalized way programs to Supercharge your career and land your dream tech job
+          </p>
+
+          <p className="text-lg font-medium text-gray-900 my-1">
+            <span className="text-xl font-semibold text-primary">Build </span>professional projects with professionals.
+          </p>
+          <p className="text-lg font-medium text-gray-900 my-1">
+            <span className="text-xl font-semibold text-primary">Master </span>the current cutting-edge technologies
+          </p>
+          <p className="text-lg font-medium text-gray-900 my-1 mb-4">
+            <span className="text-xl font-semibold text-primary">Crack </span>your dream role at the best tech companies
+          </p>
+
+          <p className="text-primary font-semibold text-2xl my-5 flex items-center">
+            <img src={play} className="w-10" />
+            &nbsp;Upskill with Tech Vedhu
+          </p>
+
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2">
+            <button className="px-7 py-4 bg-transparent border-2 border-primary text-primary font-medium rounded-2xl hover:bg-primary hover:text-white focus:outline-none">
+              Explore Our Programs
+            </button>
+
+            <button className="px-7 py-4 bg-primary text-white font-medium rounded-2xl shadow-md hover:bg-blue-700 focus:outline-none">
+              Book Your Free Trial, Now
+            </button>
+          </div>
         </div>
       </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-custom-radial-skyblue">
+
+        <div className="flex flex-wrap justify-center gap-x-8 bg-[#ecf4ff] rounded-lg shadow-md py-6 mb-12 items-center">
+          <div className="text-center p-4 sm:py-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-blue-800">1000+</h2>
+            <p className="text-gray-600 text-sm">Learning hours</p>
+          </div>
+          <div className="text-center p-4 border-t sm:border-t-0 sm:border-l border-gray-200">
+            <h2 className="text-xl sm:text-2xl font-bold text-blue-800">92%</h2>
+            <p className="text-gray-600 text-sm">Of learners noted a positive impact on productivity</p>
+          </div>
+          <div className="text-center p-4 border-t sm:border-t-0 sm:border-l border-gray-200">
+            <h2 className="text-xl sm:text-2xl font-bold text-blue-800">50%</h2>
+            <p className="text-gray-600 text-sm">Average salary hike</p>
+          </div>
+          <div className="text-center p-4 border-t sm:border-t-0 sm:border-l border-gray-200">
+            <h2 className="text-xl sm:text-2xl font-bold text-blue-800">100+</h2>
+            <p className="text-gray-600 text-sm">Hiring partners</p>
+          </div>
+        </div>
 
 
 
         <h2 className="text-center text-2xl sm:text-4xl font-bold text-blue-800 my-10 sm:my-20">Why Choose Us</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="flex flex-col items-center bg-white rounded-lg shadow-md px-6 py-10 text-center">
+          <div className="flex flex-col items-center bg-white rounded-lg shadow-md px-6 py-14 text-center">
             <img src={whychooseus1} alt="Live Interactive Class" className="w-10 h-10 sm:w-12 sm:h-12 mb-4" />
             <h3 className="font-semibold text-gray-700 text-base sm:text-lg">Live interactive class</h3>
           </div>
@@ -136,8 +135,6 @@ function Home() {
         </div>
       </div>
 
-
-
       <div className="bg-gray-50">
         {/* Heading */}
         <div className="text-center py-10">
@@ -149,7 +146,7 @@ function Home() {
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-36 px-4 sm:px-6 md:px-0">
           {/* Internship / Certificate Program */}
-          <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6 w-full md:w-1/2 lg:w-1/3">
+          <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6 md:w-1/2 lg:w-1/3">
             <h3 className="text-center font-semibold text-base sm:text-lg md:text-xl mb-4 sm:mb-6">
               Internship / Certificate Program
             </h3>
@@ -176,7 +173,7 @@ function Home() {
           </div>
 
           {/* Placement Guaranteed Program */}
-          <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6 w-full md:w-1/2 lg:w-1/3">
+          <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6  md:w-1/2 lg:w-1/3">
             <h3 className="text-center font-semibold text-base sm:text-lg md:text-xl mb-4 sm:mb-6">
               Placement Guaranteed Program
             </h3>
@@ -204,7 +201,7 @@ function Home() {
 
 
         {/* Logos Section */}
-        <div className="bg-blue-50 mt-12 py-8 px-4 sm:px-6">
+        <div className="bg-[#1554A514] mt-12 py-8 px-4 sm:px-6  mx-auto mb-12">
           <h3 className="text-center text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-800 mb-6">
             Our Learners Work at
           </h3>
@@ -251,10 +248,7 @@ function Home() {
 
       <GoogleReviews />
 
-    </div>
-
-
-
+    </>
   );
 }
 

@@ -15,6 +15,9 @@ export default {
       backgroundImage: {
         'custom-radial-skyblue': 'radial-gradient(ellipse at center, rgba(21, 84, 165, 0.06) 60%, rgba(255, 255, 255, 0.08) 70%)',
       },
+      triangle: {
+        polygon: "polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%)",
+      },
     },
   },
   plugins: [],

@@ -81,3 +81,37 @@
     height: 120px; /* Ensures no distortion */
     object-fit: cover; /* Ensures the image scales correctly */
   }
+
+  .intership-certificatebg{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+  }
+
+  .shaped-button {
+    position: absolute;
+    top: 23px;
+    right: -16px;
+    background-color: #4caf50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    /* clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 75%, 85% 100%, 75% 75%, 0 75%); */
+    cursor: pointer;
+    transition: 0.3s;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  .triangle-for-offer{
+    position: absolute;
+    top: 41px;
+    left: 101px;
+    width: 15px;
+    height: 15px;
+    background-color: #4caf50;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+  
+  .shaped-button:hover {
+    background-color: #45a049; /* Darker green */
+  }
